@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bambang Pujiarto - Portofolio Akademik & Profesional</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1a202c',    // Deep slate
+                            primary: '#2c3e50', // Elegant Navy
+                            accent: '#d4af37',  // Soft Gold
+                            light: '#f8f9fa',   // Off-white
+                            muted: '#718096'    // Cool gray
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for an elegant touch */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        /* Subtle fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-serif text-2xl font-bold text-brand-primary tracking-wider">BP<span class="text-brand-accent">.</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#profil" class="text-sm font-medium text-brand-muted hover:text-brand-accent transition-colors">Profil</a>
+                    <a href="#pengalaman" class="text-sm font-medium text-brand-muted hover:text-brand-accent transition-colors">Pengalaman</a>
+                    <a href="#pendidikan" class="text-sm font-medium text-brand-muted hover:text-brand-accent transition-colors">Pendidikan</a>
+                    <a href="#karya" class="text-sm font-medium text-brand-muted hover:text-brand-accent transition-colors">Karya & Inovasi</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-primary hover:text-brand-accent focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 pt-2 pb-4 space-y-1 shadow-lg">
+                <a href="#profil" class="mobile-link block px-3 py-3 text-base font-medium text-brand-primary border-b border-gray-50">Profil</a>
+                <a href="#pengalaman" class="mobile-link block px-3 py-3 text-base font-medium text-brand-primary border-b border-gray-50">Pengalaman</a>
+                <a href="#pendidikan" class="mobile-link block px-3 py-3 text-base font-medium text-brand-primary border-b border-gray-50">Pendidikan</a>
+                <a href="#karya" class="mobile-link block px-3 py-3 text-base font-medium text-brand-primary">Karya & Inovasi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="profil" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto animate-fade-in">
+        <div class="flex flex-col md:flex-row gap-12 items-center md:items-start">
+            <!-- Profile Avatar/Initial -->
+            <div class="w-40 h-40 md:w-48 md:h-48 shrink-0 relative">
+                <!-- Ganti 'profil.jpg' dengan nama file foto Anda jika berbeda -->
+                <img src="https://lh3.googleusercontent.com/d/1GCo_udPbjnQOtCZZGHDmAy_rI-2tXZCr" alt="Foto Bambang Pujiarto" class="w-full h-full object-cover rounded-full border-4 border-white shadow-2xl bg-brand-primary" onerror="this.src='https://ui-avatars.com/api/?name=Bambang+Pujiarto&background=2c3e50&color=fff&size=200'" />
+                
+                <div class="absolute -bottom-2 -right-2 bg-brand-accent w-12 h-12 rounded-full border-4 border-white flex items-center justify-center text-white z-10">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+
+            <!-- Profile Details -->
+            <div class="text-center md:text-left flex-1">
+                <p class="text-brand-accent font-semibold tracking-widest uppercase text-sm mb-3">Akademisi Bidang Teknologi Informasi</p>
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-6 leading-tight">
+                    Bambang Pujiarto<br>
+                    <span class="text-2xl md:text-3xl font-sans text-brand-muted font-normal mt-2 block">S.Kom., M.Kom</span>
+                </h1>
+                
+                <p class="text-brand-muted text-lg leading-relaxed mb-8 max-w-3xl text-justify md:text-left">
+                    Akademisi berdedikasi tinggi di bidang Teknologi Informasi dengan spesialisasi pada <strong>Jaringan Komputer</strong>, <strong>Cyber Security</strong>, dan <strong>Multimedia</strong>. Memiliki pengalaman ekstensif dalam dunia pendidikan vokasi, industri internet, serta pendampingan sekolah menengah kejuruan. Berkomitmen pada pengembangan riset, inovasi pembelajaran, dan peningkatan kompetensi sumber daya manusia di era digital.
+                </p>
+
+                <!-- Contact Info -->
+                <div class="flex flex-wrap gap-6 justify-center md:justify-start mb-10 text-sm font-medium">
+                    <a href="mailto:bepe@unimma.ac.id" class="flex items-center gap-2 text-brand-primary hover:text-brand-accent transition-colors">
+                        <i class="fa-solid fa-envelope"></i> bepe@unimma.ac.id
+                    </a>
+                    <a href="https://www.linkedin.com/in/bpujiarto" target="_blank" class="flex items-center gap-2 text-brand-primary hover:text-brand-accent transition-colors">
+                        <i class="fa-brands fa-linkedin text-lg"></i> bpujiarto
+                    </a>
+                    <span class="flex items-center gap-2 text-brand-muted">
+                        <i class="fa-solid fa-location-dot"></i> Magelang, Indonesia
+                    </span>
+                </div>
+
+                <!-- Skills -->
+                <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+                    <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-brand-primary text-sm shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-network-wired text-brand-accent"></i> Jaringan Komputer
+                    </span>
+                    <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-brand-primary text-sm shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-brand-accent"></i> Cyber Security
+                    </span>
+                    <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-brand-primary text-sm shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-laptop-code text-brand-accent"></i> Multimedia
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-white">
+        <!-- Experience Section -->
+        <section id="pengalaman" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-gray-100">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center text-brand-accent text-xl">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <h2 class="text-3xl font-serif font-bold text-brand-dark">Pengalaman Profesional</h2>
+            </div>
+
+            <div class="relative border-l border-gray-200 ml-6 md:ml-8 space-y-12 pb-4">
+                
+                <!-- Exp 1 -->
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-3.5 top-1.5 flex items-center justify-center w-7 h-7 rounded-full bg-white border-2 border-brand-accent shadow-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-accent"></span>
+                    </span>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-brand-primary">Ketua Tim Pendamping SMK PK & Narasumber</h3>
+                        <span class="text-sm font-semibold text-brand-accent bg-amber-50 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">2022 - 2023</span>
+                    </div>
+                    <h4 class="text-md font-medium text-brand-muted mb-4">Universitas Muhammadiyah Magelang</h4>
+                    <p class="text-gray-600 leading-relaxed">Menjadi ketua tim pendamping SMK Pusat Keunggulan (PK) tahun 2022-2023. Bertindak sebagai narasumber untuk pengembangan Teaching Factory (TeFa) SMK dan pembelajaran berbasis project.</p>
+                </div>
+
+                <!-- Exp 2 -->
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-3.5 top-1.5 flex items-center justify-center w-7 h-7 rounded-full bg-white border-2 border-brand-primary shadow-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-primary"></span>
+                    </span>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-brand-primary">Asesor Kompetensi</h3>
+                        <span class="text-sm font-semibold text-brand-primary bg-gray-100 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">2019 - Sekarang</span>
+                    </div>
+                    <h4 class="text-md font-medium text-brand-muted mb-4">LSP Informatika</h4>
+                    <p class="text-gray-600 leading-relaxed">Bertugas sebagai asesor sertifikasi kompetensi untuk bidang Computer Network dan Multimedia.</p>
+                </div>
+
+                <!-- Exp 3 -->
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-3.5 top-1.5 flex items-center justify-center w-7 h-7 rounded-full bg-white border-2 border-brand-primary shadow-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-primary"></span>
+                    </span>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-brand-primary">Dosen Program Studi Teknologi Informasi D3</h3>
+                        <span class="text-sm font-semibold text-brand-primary bg-gray-100 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">2009 - Sekarang</span>
+                    </div>
+                    <h4 class="text-md font-medium text-brand-muted mb-4">Universitas Muhammadiyah Magelang</h4>
+                    <p class="text-gray-600 leading-relaxed">Mengampu berbagai mata kuliah inti termasuk Network Administrator, Cyber Security, Ethical Hacking, Digital Media, Graphic Design, dan Content Development.</p>
+                </div>
+
+                <!-- Exp 4 -->
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-3.5 top-1.5 flex items-center justify-center w-7 h-7 rounded-full bg-white border-2 border-brand-primary shadow-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-primary"></span>
+                    </span>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-brand-primary">IT Support & Laboran</h3>
+                        <span class="text-sm font-semibold text-brand-primary bg-gray-100 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">2006 - 2009</span>
+                    </div>
+                    <h4 class="text-md font-medium text-brand-muted mb-4">Universitas Muhammadiyah Magelang (Fakultas Teknik)</h4>
+                    <p class="text-gray-600 leading-relaxed">Menyediakan dukungan teknologi informasi dan mengelola operasional laboratorium Fakultas Teknik.</p>
+                </div>
+
+                <!-- Exp 5 -->
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-3.5 top-1.5 flex items-center justify-center w-7 h-7 rounded-full bg-white border-2 border-brand-primary shadow-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-primary"></span>
+                    </span>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-brand-primary">Technical Officer</h3>
+                        <span class="text-sm font-semibold text-brand-primary bg-gray-100 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">2004</span>
+                    </div>
+                    <h4 class="text-md font-medium text-brand-muted mb-4">PT. Lintas Cakrawala</h4>
+                    <p class="text-gray-600 leading-relaxed">Bekerja sebagai teknisi internet pada sebuah perusahaan Internet Service Provider (ISP) di Yogyakarta.</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Education & Certification -->
+    <section id="pendidikan" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16">
+            
+            <!-- Education -->
+            <div>
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-brand-primary text-xl">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h2 class="text-2xl font-serif font-bold text-brand-dark">Riwayat Pendidikan</h2>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-brand-accent transition-colors">
+                        <p class="text-brand-accent font-semibold text-sm uppercase tracking-wider mb-1">Magister (S2)</p>
+                        <h3 class="text-xl font-bold text-brand-primary mb-2">Teknik Informatika</h3>
+                        <p class="text-brand-muted flex items-center gap-2"><i class="fa-solid fa-building-columns text-sm"></i> Universitas AMIKOM Yogyakarta</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-brand-accent transition-colors">
+                        <p class="text-brand-accent font-semibold text-sm uppercase tracking-wider mb-1">Sarjana (S1)</p>
+                        <h3 class="text-xl font-bold text-brand-primary mb-2">Teknik Informatika</h3>
+                        <p class="text-brand-muted flex items-center gap-2"><i class="fa-solid fa-building-columns text-sm"></i> Universitas AMIKOM Yogyakarta</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div>
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-brand-primary text-xl">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h2 class="text-2xl font-serif font-bold text-brand-dark">Sertifikasi Profesional</h2>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+                    <ul class="space-y-5">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-award text-brand-accent mt-1 text-lg"></i>
+                            <span class="text-gray-700 font-medium">Computer Hacking Forensic Investigator (CHFI)</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-award text-brand-accent mt-1 text-lg"></i>
+                            <span class="text-gray-700 font-medium">Certified Ethical Hacker (CEH)</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-award text-brand-accent mt-1 text-lg"></i>
+                            <span class="text-gray-700 font-medium">Certified Network Defender (CND)</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-award text-brand-accent mt-1 text-lg"></i>
+                            <span class="text-gray-700 font-medium">Microsoft Technology Associate: Security Fundamentals (MTA)</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-award text-brand-accent mt-1 text-lg"></i>
+                            <span class="text-gray-700 font-medium">Assessor of Competency (BNSP)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects & Publications Section -->
+    <section id="karya" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-gray-200">
+        
+        <!-- Intellectual Property / Projects -->
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-10 justify-center">
+                <i class="fa-solid fa-lightbulb text-3xl text-brand-accent"></i>
+                <h2 class="text-3xl font-serif font-bold text-brand-dark">Proyek & Hak Cipta (HKI)</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-brand-primary rounded-2xl p-8 text-white relative overflow-hidden group shadow-lg">
+                    <i class="fa-solid fa-vr-cardboard absolute -right-4 -bottom-4 text-9xl text-white opacity-5 transform group-hover:scale-110 transition-transform duration-500"></i>
+                    <div class="relative z-10">
+                        <div class="flex flex-wrap items-center gap-3 mb-5">
+                            <span class="px-3 py-1 bg-white/10 text-white text-xs font-bold uppercase tracking-wider rounded">2022</span>
+                            <span class="px-3 py-1 bg-brand-accent text-brand-primary text-xs font-bold uppercase tracking-wider rounded shadow-sm"><i class="fa-solid fa-copyright mr-1"></i> Hak Cipta Terdaftar</span>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold mb-2">Home Learning Indonesia</h3>
+                        <p class="text-brand-light/80 mb-6 text-sm">Matching Fund Vokasi Kemdikbudristek</p>
+                        <div class="pt-4 border-t border-white/20 flex items-center gap-2 text-sm font-medium">
+                            <span class="text-brand-accent">Peran:</span> Ketua Tim R&D
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-brand-primary rounded-2xl p-8 text-white relative overflow-hidden group shadow-lg">
+                    <i class="fa-solid fa-leaf absolute -right-4 -bottom-4 text-9xl text-white opacity-5 transform group-hover:scale-110 transition-transform duration-500"></i>
+                    <div class="relative z-10">
+                        <div class="flex flex-wrap items-center gap-3 mb-5">
+                            <span class="px-3 py-1 bg-white/10 text-white text-xs font-bold uppercase tracking-wider rounded">2023</span>
+                            <span class="px-3 py-1 bg-brand-accent text-brand-primary text-xs font-bold uppercase tracking-wider rounded shadow-sm"><i class="fa-solid fa-copyright mr-1"></i> Hak Cipta Terdaftar</span>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold mb-2">Metaverse Ekowisata Borobudur</h3>
+                        <p class="text-brand-light/80 mb-6 text-sm">Matching Fund Vokasi Kemdikbudristek</p>
+                        <div class="pt-4 border-t border-white/20 flex items-center gap-2 text-sm font-medium">
+                            <span class="text-brand-accent">Peran:</span> Inventor
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12">
+            <!-- Publications -->
+            <div class="md:col-span-2">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-2xl font-serif font-bold text-brand-dark">Publikasi Ilmiah</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="p-5 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
+                        <i class="fa-solid fa-book-journal-whills text-brand-muted mt-1"></i>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            <strong class="text-brand-primary">Optimizing energy harvesting from waste motor oil through steam reforming:</strong> A path to efficient combustion and emissions reduction (Mechanical Engineering for Society and Industry 3 (2), 86-92) <span class="text-brand-accent font-semibold ml-1">2023</span>
+                        </p>
+                    </div>
+                    <div class="p-5 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
+                        <i class="fa-solid fa-book-journal-whills text-brand-muted mt-1"></i>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            <strong class="text-brand-primary">A study of utilization of information and communication technology for e-dakwah</strong> with user satisfaction approach: A systematic review (AIP Conference Proceedings 2706 (1)) <span class="text-brand-accent font-semibold ml-1">2023</span>
+                        </p>
+                    </div>
+                    <div class="p-5 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
+                        <i class="fa-solid fa-book-journal-whills text-brand-muted mt-1"></i>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            <strong class="text-brand-primary">The Influence of Blockchain Implementation for Virtual Meetings</strong> at Home Learning Indonesia (International Journal of Emerging Technologies in Learning (Online) 18 (6), 220) <span class="text-brand-accent font-semibold ml-1">2023</span>
+                        </p>
+                    </div>
+                    <div class="p-5 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
+                        <i class="fa-solid fa-book-journal-whills text-brand-muted mt-1"></i>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            <strong class="text-brand-primary">Network Automation pada Beberapa Perangkat Router</strong> Menggunakan Pemrograman Python (Jurnal Teknologi Informasi dan Ilmu Komputer 9 (1), 79-86) <span class="text-brand-accent font-semibold ml-1">2022</span>
+                        </p>
+                    </div>
+                    <div class="p-5 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
+                        <i class="fa-solid fa-book-journal-whills text-brand-muted mt-1"></i>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            <strong class="text-brand-primary">Social network analysis for user interaction analysis</strong> on social media regarding e-commerce business (International Journal of Informatics and Information Systems 4 (2), 95-102) <span class="text-brand-accent font-semibold ml-1">2021</span>
+                        </p>
+                    </div>
+                    <div class="p-5 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
+                        <i class="fa-solid fa-book-journal-whills text-brand-muted mt-1"></i>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            <strong class="text-brand-primary">Sustainable nature tourism development through ICT implementation:</strong> A case of Indonesian Pines Village (AIP Conference Proceedings) <span class="text-brand-accent font-semibold ml-1">2019</span>
+                        </p>
+                    </div>
+                    <div class="p-5 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
+                        <i class="fa-solid fa-book-journal-whills text-brand-muted mt-1"></i>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            <strong class="text-brand-primary">Evaluasi Keamanan Wireless Local Area Network</strong> Menggunakan Metode Penetration Testing (Data Manajemen dan Teknologi Informasi) <span class="text-brand-accent font-semibold ml-1">2013</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Books -->
+            <div class="md:col-span-1">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-2xl font-serif font-bold text-brand-dark">Karya Buku</h2>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm text-center">
+                    <div class="w-full aspect-[3/4] bg-brand-primary rounded-lg border-b-8 border-brand-accent flex items-center justify-center p-6 text-center shadow-inner mb-6 relative overflow-hidden">
+                        <!-- Book Cover Graphic -->
+                        <div>
+                          <img src="https://lh3.googleusercontent.com/d/1f0Nw7vzn1wx8QPc6aQglU0jgICeevGb6" alt="Foto Bambang Pujiarto" class="absolute inset-0">
+                        </div> 
+                    </div>
+                    <h4 class="font-bold text-brand-primary leading-snug mb-2">Desa Go Digital</h4>
+                    <p class="text-sm text-gray-500 mb-4">Panduan Praktis Digital Branding & Marketing untuk BUMDes, Karang Taruna, dan Pelaku UMKM Desa.</p>
+                    <span class="inline-block px-3 py-1 bg-gray-100 text-brand-muted text-xs font-bold rounded-full">Tahun Terbit: 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-16 pb-8 border-t-4 border-brand-accent mt-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+            <span class="font-serif text-3xl font-bold mb-4 tracking-wider">BP<span class="text-brand-accent">.</span></span>
+            <p class="mb-8 text-brand-muted max-w-md font-light text-sm">
+                Membangun generasi unggul melalui pendidikan vokasi, literasi teknologi, dan keamanan siber.
+            </p>
+            
+            <div class="flex gap-4 mb-10">
+                <a href="mailto:bepe@unimma.ac.id" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-all duration-300">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/bpujiarto" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-all duration-300">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+            
+            <div class="w-full border-t border-white/10 pt-8 text-xs text-brand-muted/70 tracking-widest uppercase">
+                &copy; <span id="year"></span> Bambang Pujiarto. Hak Cipta Dilindungi.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when link is clicked
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
